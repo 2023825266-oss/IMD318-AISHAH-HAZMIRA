@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #b39dbb;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #333;
+    text-align: center;
+  }
+
+  header {
+    background-color: #b39dbb;
+    padding: 40px 20px;
+
+  }
+
+/* modern clean nav */
+nav.nav-modern {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(5px);
+  padding: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 20px;  /* optional: moves it slightly lower */
+  z-index: 10;
+}
+
+.nav-logo, header h1 {
+    font-family: 'Playfair Display', serif;
+}
+
+nav.nav-modern ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  font-weight: 500;
+}
+
+nav.nav-modern a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  padding: 8px 0;
+  position: relative;
+}
+
+/* underline animation */
+nav.nav-modern a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: #6a4c93;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+nav.nav-modern a:hover::after {
+  width: 100%;
+}
+
+/* active page */
+nav.nav-modern a.active {
+  color: #6a4c93;
+  font-weight: 600;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.nav-logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: #6a4c93;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between emoji/logo and text */
+}
+.nav-logo:hover {
+  color: #8e5ec1;
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+.nav-modern .nav-links {
+  display: flex;
+  gap: 25px;
+}
+    main {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(6px);
+			flex:1;
+			text-align: center;
+			padding: 30px;
+			border-radius: 10px;
+			margin: 30px auto;
+			border-radius: 10px;
+			box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+
+		}
+		footer {
+			background: #b39dbb;
+			color: #ffffff;
+			padding: 20px;
+			font-size: 14px;
+			text-align: center;
+			font-family: sans-serif;
+		}
+		
+		body {
+  font-family: 'Poppins', sans-serif;
+}
+
+header h1 {
+  font-family: 'Lobster';
+  font-size: 2.5em;
+}
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  color: #6a4c93;
+  margin-bottom: 10px;
+}
+
+  h3 {
+  display: block;
+  margin: 30px 0 10px 0; /* top, left/right, bottom */
+  background-color: #d1c4e9;
+  padding: 5px 15px;
+  border-radius: 10px;
+  color: #6a4c93;
+  text-align: left;
+  width: fit-content; /* keeps box size tight to text */
+}
+
+.experience-timeline {
+  max-width: 900px;
+  margin: 50px auto;
+  position: relative;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: scale(1.02);
+}
+
+.timeline-icon {
+  font-size: 24px;
+  background-color: #d1c4e9;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  margin-right: 20px;
+}
+
+.timeline-content {
+  background-color: #f9f6ff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.timeline-date em {
+  color: #6a4c93;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.experience-wrapper {
+  max-width: 1000px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Glassmorphism Card */
+.experience-card {
+  display: flex;
+  gap: 30px;
+  padding: 25px;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transition: 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-8px);
+}
+
+.experience-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.experience-image img {
+  width: 260px;
+  border-radius: 15px;
+}
+
+.experience-content {
+  text-align: left;
+}
+.experience-content h3 {
+  margin-left: 0;
+}
+
+.experience-card {
+  border: 1px solid rgba(106, 76, 147, 0.25);
+}
+
+
+.year-badge {
+  background: #6a4c93;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.skills {
+  margin-top: 10px;
+}
+
+.skills span {
+  background: #e9d8f2;
+  color: #6a4c93;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 13px;
+  margin: 4px;
+  display: inline-block;
+}
+
+/* Reflection box */
+.reflection-box {
+  background: rgba(255,255,255,0.85);
+  padding: 30px;
+  border-radius: 18px;
+  max-width: 800px;
+  margin: 60px auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+.reflection-box {
+  text-align: center;
+}
+.reflection-box h3 {
+  margin: 0 auto 15px;
+}
+
+.reflection-box p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+  .clock-style {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 28px;
+  font-family: 'Playfair Display', serif;
+  background: rgba(255, 255, 255, 0.7);
+  color: #6a4c93;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 768px) {
+  .experience-card, .experience-card.reverse {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .experience-content {
+    text-align: center;
+  }
+}
+
+	</style>
+
+
+	<title>Experience</title>
+</head>
+<body>
+
+<nav class="nav-modern">
+	<div class="nav-container">
+    <div class="nav-logo">🌸Hazmira's Journey</div>
+
+	<ul class="nav-links">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="aboutme.html">About Me</a></li>
+		<li><a href="experience.html"class="active">Experience</a></li>
+		<li><a href="education.html">Education</a></li>
+		<li><a href="family.html">Family</a></li>
+		<li><a href="friends.html">Friends</a></li>
+		<li><a href="favourites.html">Favourites</a></li>
+		<li><a href="gallery.html">Gallery</a></li>
+	</ul>
+</div>
+</nav>
+
+<main>
+  <div id="clock" class="clock-style"></div>
+  <h2 style="color:#6a4c93;">My Experiences</h2>
+<p style="max-width:700px; margin:auto;">
+  These experiences shaped my skills, confidence, and readiness for professional life.
+</p>
+
+<div class="experience-wrapper">
+
+  <!-- Experience 1 -->
+  <div class="experience-card">
+    <div class="experience-image">
+      <img src="intern_1.jpg" alt="Internship">
+    </div>
+    <div class="experience-content">
+      <span class="year-badge">2025</span>
+      <h3 style="color:#6a4c93;">Internship – Pejabat Daerah Kuala Nerus</h3>
+      <p><em>July 2025 – September 2025</em></p>
+      <p>
+        Underwent a two-month internship at the Kuala Nerus District Office.
+      </p>
+      <div class="skills">
+        <span>Teamwork</span>
+        <span>Internship</span>
+        <span>Relationship</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Experience 2 -->
+  <div class="experience-card reverse">
+    <div class="experience-image">
+      <img src="airbalang.jpg" alt="Air Balang">
+    </div>
+    <div class="experience-content">
+      <span class="year-badge">2025</span>
+      <h3 style="color:#6a4c93;">Opening a Drink Stall</h3>
+      <p><em>March 2025</em></p>
+      <p>
+        Selling air balang, carbonara popia, and several other kuih throughout the month of Ramadan.
+      </p>
+      <div class="skills">
+        <span>Drinks</span>
+        <span>Ramadan</span>
+        <span>Small business</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Experience 3 -->
+  <div class="experience-card">
+    <div class="experience-image">
+      <img src="carboot.jpg" alt="Carboot">
+    </div>
+    <div class="experience-content">
+      <span class="year-badge">2024</span>
+      <h3 style="color:#6a4c93;">Carboot Sale</h3>
+      <p><em>August 2024</em></p>
+      <p>
+        Selling preloved clothing at a car boot sale at UniSZA.
+      </p>
+      <div class="skills">
+        <span>Clothes</span>
+        <span>Business</span>
+        <span>Preloved</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Experience 4 -->
+  <div class="experience-card">
+    <div class="experience-image">
+      <img src="umrah.jpg" alt="Umrah">
+    </div>
+    <div class="experience-content">
+      <span class="year-badge">2021</span>
+      <h3 style="color:#6a4c93;">Umrah</h3>
+      <p><em>May 2021</em></p>
+      <p>
+        Performed the Umrah journey with family.
+      </p>
+      <div class="skills">
+        <span>Umrah</span>
+        <span>Family</span>
+        <span>Mekah</span>
+        <span>Madinah</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Reflection -->
+<div class="reflection-box">
+  <h3 style="color:#6a4c93;">What I learned</h3>
+  <p>
+    These experiences taught me responsibility, creativity, and adaptability.
+    They prepared me to face real-world challenges with confidence and professionalism.
+  </p>
+</div>
+
+</main>
+	<footer>
+		<p> &copy; 2025 This website is for educational purposes only | Aishah Hazmira Binti Mahussin </p>
+	</footer>
+
+  <script>
+  function updateClock() {
+  const now = new Date();
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const seconds = String(now.getSeconds()).padStart(2, '0');
+  document.getElementById('clock').innerText = `${hours}:${minutes}:${seconds}`;
+}
+
+// update setiap 1 saat
+setInterval(updateClock, 1000);
+updateClock(); // run immediately
+</script>
+
+</body>
+</html>
